@@ -1,4 +1,6 @@
 public/bundle.js*
+public/App.js
+public/.fable/*
 
 # Node
 node_modules/

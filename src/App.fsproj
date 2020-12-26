@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="App.fs" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Fable.Elmish.React" Version="3.0.1" />
-      <PackageReference Include="Feliz" Version="1.17.0" />
+      <PackageReference Include="Feliz" Version="1.31.1" />
     </ItemGroup>
 </Project>
