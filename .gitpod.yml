@@ -1,3 +1,3 @@
 image: gitpod/workspace-dotnet
 tasks:
-  - init: npm install && dotnet tool install --global Fable
+  - init: npm install && dotnet tool install --global Fable && export PATH=$PATH:/home/gitpod/.dotnet/tools/
