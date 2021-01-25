@@ -1,0 +1,10 @@
+image: gitpod/workspace-dotnet
+tasks:
+  - init: npm install && dotnet tool install --global Fable && export PATH=$PATH:/home/gitpod/.dotnet/tools/
+vscode:
+  extensions:
+    - ms-dotnettools.csharp@1.23.8:iO8KaJulQm9UBFXlmZNiog==
+    - ionide.ionide-fsharp@5.1.0:tRmqItNgxIV8H7ffpcz/sw==
+ports:
+  - port: 8080
+    onOpen: open-preview
