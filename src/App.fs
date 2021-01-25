@@ -34,19 +34,43 @@ let render (state: State) (dispatch: Msg -> unit) =
     let headerText = sprintf "Counter at %d" state.Count
     let summary = sprintf "You clicked %d %s" state.Sum (if state.Sum = 1 then "time" else "times") 
     
-    Html.div [
-        Html.button [
-            prop.onClick (fun _ -> dispatch Increment)
-            prop.text "Increment"
+    Html.div [     
+        prop.className "container"
+        prop.children [
+            Html.h1 [ 
+                prop.className "row display-1" 
+                prop.text "The Counter" 
+            ]
+
+            Html.div [
+                prop.className "d-grid gap-2"
+                prop.children [
+                    Html.button [
+                        prop.type' "button"
+                        prop.className "btn btn-primary btn-lg"
+                        prop.onClick (fun _ -> dispatch Increment)
+                        prop.text "Increment"
+                    ] 
+
+                    Html.button [
+                        prop.type' "button"
+                        prop.className "btn btn-primary btn-lg"
+                        prop.onClick (fun _ -> dispatch Decrement)
+                        prop.text "Decrement"
+                    ]   
+                ]
+            ]
+            
+            Html.h3 [ 
+                prop.className "row" 
+                prop.text headerText 
+            ]
+            
+            Html.h3 [
+                prop.className "row" 
+                prop.text summary
+            ]
         ]
-        
-        Html.button [
-            prop.onClick (fun _ -> dispatch Decrement)
-            prop.text "Decrement"
-        ]
-        
-        Html.h1 headerText
-        Html.h2 summary
     ]
 
 

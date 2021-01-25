@@ -33,7 +33,7 @@ While developing the application, you don't want to recompile the application ev
 ```powershell
 dotnet tool install --global Fable
 npm install
-fable .\src\ --outDir .\public\ --runWatch npm start
+fable watch .\src\ --outDir .\public\ --run npm start
 ```
 
-If you already ran `npm install` then you don't need to run it again. `fable .\src\ --outDir .\public\ --runWatch npm start` will start the developement mode by invoking `webpack-dev-server`: the webpack development server that starts a lightweight local server at [http://localhost:8080](http://localhost:8080) from which the server will serve the client application
+If you already ran `npm install` then you don't need to run it again. `fable watch .\src\ --outDir .\public\ --run npm start` will start the developement mode by invoking `webpack-dev-server`: the webpack development server that starts a lightweight local server at [http://localhost:8080](http://localhost:8080) from which the server will serve the client application
