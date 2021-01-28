@@ -5,6 +5,7 @@ open Elmish
 open Elmish.React
 open Feliz
 
+open Component
 
 type State =
     { Count: int
@@ -49,14 +50,14 @@ let render (state: State) (dispatch: Msg -> unit) =
                         prop.type' "button"
                         prop.className "btn btn-primary btn-lg"
                         prop.onClick (fun _ -> dispatch Increment)
-                        prop.text "Increment"
+                        prop.text "Increment +"
                     ] 
 
                     Html.button [
                         prop.type' "button"
                         prop.className "btn btn-primary btn-lg"
                         prop.onClick (fun _ -> dispatch Decrement)
-                        prop.text "Decrement"
+                        prop.text "Decrement -"
                     ]   
                 ]
             ]
@@ -69,6 +70,14 @@ let render (state: State) (dispatch: Msg -> unit) =
             Html.h3 [
                 prop.className "row" 
                 prop.text summary
+            ]
+
+            Html.hr []
+
+            Html.div [
+                prop.children [
+                   greeting { Name = Some "Thomas" }
+                ]
             ]
         ]
     ]

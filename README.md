@@ -17,7 +17,7 @@ To compile the project, run the following commands
 ```powershell
 dotnet tool install --global Fable
 npm install
-fable .\src\ --outDir .\public\
+fable .\src\ --outDir .\public\ --extension ".js"
 ```
 
 `dotnet tool install --global Fable` will install the latest version of Fable compiler as a .NET Tool.
@@ -35,7 +35,7 @@ While developing the application, you don't want to recompile the application ev
 ```powershell
 dotnet tool install --global Fable
 npm install
-fable watch .\src\ --outDir .\public\ --run npm start
+fable watch .\src\ --extension ".js" --sourceMaps --run npm run start
 ```
 
-If you already ran `npm install` then you don't need to run it again. `fable watch .\src\ --outDir .\public\ --run npm start` will start the developement mode by invoking `webpack-dev-server`: the webpack development server that starts a lightweight local server at [http://localhost:8080](http://localhost:8080) from which the server will serve the client application
+If you already ran `npm install` then you don't need to run it again. `fable watch .\src\ --extension ".js" --sourceMaps --run npm run start` will start the developement mode by invoking `snowpack dev`: snowpack starts a lightweight local server at [http://localhost:8080](http://localhost:8080) from which the client application gets served.

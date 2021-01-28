@@ -1,15 +1,13 @@
 {
     "private": true,
     "scripts": {
-        "start": "webpack-dev-server"
+        "start": "snowpack dev"
     },
     "dependencies": {
         "react": "^17.0.1",
         "react-dom": "^17.0.1"
     },
     "devDependencies": {
-        "webpack": "^5.17.0",
-        "webpack-cli": "^3.3.12",
-        "webpack-dev-server": "^3.11.2"
+        "snowpack": "^3.0.11"
     }
 }
